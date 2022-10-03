@@ -1,0 +1,35 @@
+Set up (mis en place)
+
+1 créer sur le bureau dossier "javascript"
+2 lancer Visual Studio Code
+3 Visual Studio Code > fichier > ouvrir le dossier > "javascript"
+
+4 Visual Studio Code > Explorateur > jour1 (dossier)
+                                   > 00-start.txt
+
+5 Facultatif 
+=> installé une extension "Zoom Bar"
+=> Gerer > Thème de couleur > Themes Clair 
+=> live serveur (déjà installée)
+=> mettre en place un retour à la ligne automatique (si le texte plus large que l'écran)
+Gérer > Paramètres > rechercher "wrap" > résultat "Editor: Word Wrap" > on
+=> extension raccourci clavier de sublim texte keymap 
+=> ctrl + Maj + D
+=> extension Prettier (desactiver)
+
+
+=> Malik HARRIZ
+=> malik.h@webdevpro.net 
+=> javascript 
+=> lundi / mardi (découverte du langage) => QCM (mardi 16h50)
+=> fin de semaine (DOM) Document Object Model => QCM (vendredi 16h50)
+
+=> 2 supports de cours sous forme de site internet 
+
+https://formation.webdevpro.net/js-initiation
+login : 
+password :
+
+=> mettre sur un git perso toutes les notes de cours 
+
+
