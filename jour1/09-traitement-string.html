@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 09-traitement-string.html
+
+        const a = "Victor";
+        const b = "Hugo";
+
+        // addition de variables qui contiennent du texte 
+        // concaténation 
+
+        // première manière : utiliser le symbole + 
+
+        const auteurFr = "je m'appelle " + a + " " + b;
+                        //"je m'appelle Victor Hugo" 
+        console.log(auteurFr);
+
+        // deuxième manière : backtick ${}
+        const auteurFr2 = `${a} ${b}`;
+        console.log(auteurFr2);
+    </script>
+</body>
+</html>
+<!--
+    1 créer un nouveau fichier 10-exo.html avec une balise <script>
+    2 ce fichier contient trois variables
+    titre = "M"
+    prenom = "John"
+    nom = "Doe"
+
+    3 écrire la phrase suivante dans la console en utilisant les 3 variables de 2 manières possibles :
+
+    Je m'appelle Monsieur John Doe
+-->
