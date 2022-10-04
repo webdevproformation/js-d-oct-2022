@@ -11,6 +11,60 @@
 <body>
     <script>
         // 02-suite-traitement-boolean.html
+        // en plus des opérateurs de comparaison
+        // opérateur boolean
+        // &&  ET
+        // ||  OU double pipe AltGr + 6
+        // !   NOT 
+
+
+        // site internet banque 
+        // login et password 
+
+        // créer mon compte
+        const loginBdd = "azerty";
+        const passwordBdd = "123456" ;
+
+        // saisir dans le formulaire de connexion
+        const loginSaisi = "azerty";
+        const passwordSaisi = "123456" ;
+
+        // si l'utilisateur saisit correctement login et password => Bonjour
+
+        // si l'utilisateur se trompe soit login soit password ou les deux => "erreur"
+
+        const verif = loginBdd == loginSaisi && passwordBdd == passwordSaisi ;
+        // const verif = "azerty" == "azerty" && "123456" == "123456"  ;
+        // const verif =         true         &&      true  ;
+        // const verif =                   true  ;
+
+        // https://www.youtube.com/results?search_query=arte+george+boole
+
+
+        // opération ||  OU 
+
+        const ageMin = 18 ;
+        const ville = "Paris" ;
+
+        // si j'ai au moins 18 ans OU que j'habite à Paris (ou les deux en même temps) => je peux avoir une carte de reduction
+        // si je ne verifie pas au moins une des conditions => je ne peux pas avoir la carte 
+        const monAge = 15 ;
+        const maVille = "Paris";
+        const reduction = ageMin >= monAge && ville == maVille ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </script>
 </body>
