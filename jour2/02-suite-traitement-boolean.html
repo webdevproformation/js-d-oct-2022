@@ -23,17 +23,17 @@
 
         // créer mon compte
         const loginBdd = "azerty";
-        const passwordBdd = "123456" ;
+        const passwordBdd = "123456";
 
         // saisir dans le formulaire de connexion
         const loginSaisi = "azerty";
-        const passwordSaisi = "123456" ;
+        const passwordSaisi = "123456";
 
         // si l'utilisateur saisit correctement login et password => Bonjour
 
         // si l'utilisateur se trompe soit login soit password ou les deux => "erreur"
 
-        const verif = loginBdd == loginSaisi && passwordBdd == passwordSaisi ;
+        const verif = loginBdd == loginSaisi && passwordBdd == passwordSaisi;
         // const verif = "azerty" == "azerty" && "123456" == "123456"  ;
         // const verif =         true         &&      true  ;
         // const verif =                   true  ;
@@ -43,14 +43,21 @@
 
         // opération ||  OU 
 
-        const ageMin = 18 ;
-        const ville = "Paris" ;
+        const ageMin = 18;
+        const ville = "Paris";
 
         // si j'ai au moins 18 ans OU que j'habite à Paris (ou les deux en même temps) => je peux avoir une carte de reduction
         // si je ne verifie pas au moins une des conditions => je ne peux pas avoir la carte 
-        const monAge = 15 ;
-        const maVille = "Paris";
-        const reduction = ageMin >= monAge && ville == maVille ;
+        const monAge = 15;
+        const maVille = "Lille";
+        const reduction = monAge >= ageMin || ville == maVille;
+        // const reduction = 15 >= 18 || "Paris" == "Lille" ;
+        // const reduction = false    ||        false ;
+        // const reduction =          false ;
+
+        // https://formation.webdevpro.net/js-initiation
+        // login : js
+        // password : initiation
 
 
 
