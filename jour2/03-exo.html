@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 2 >= 2	
+        "a" == "ab"	
+        2 != 3 && 10 < 33	
+        "hello" > "bonjour" 	
+        2 ==  "2"	
+        2 === "2"	
+        (2 != 5 && 3 > 4 ) || 2 <= 14 	
+        2 != 5 && ( 3 > 4  || 2 <= 14 ) 	
+        2 != 5 && 3 > 4  || 2 <= 14   */
+
+        const a = 2 >= 2;
+        //const a = true ;
+        console.log(a);
+
+        const b = "a" == "ab";
+        // const b = false ;
+        console.log(b);
+
+        const c = 2 != 3 && 10 < 33;
+        //const c = true && true	;
+        //const c = true 	;
+        console.log(c);
+
+        const d = "hello" > "bonjour";
+        // const d = "hello" > "bonjour"; 
+        // const d = "h 68" > "b 62"; 
+        // const d = true
+        console.log(d);
+
+        const e = 2 == "2";
+        // const e = "2" ==  "2"	;
+        // const e = true	;
+        console.log(e);
+
+        const f = 2 === "2";
+        //const f = false ;
+        console.log(f);
+
+        const h = (2 != 5 && 3 > 4) || 2 <= 14;
+        // const h = (true && false ) || true ;
+        // const h = (false ) || true ;
+        // const h = false  || true ;
+        // const h = true ;
+        console.log(h);
+
+        const i = 2 != 5 && (3 > 4 || 2 <= 14);
+        // const i = true && ( false  || true ) ;
+        // const i = true && (       true     ) ;
+        // const i = true &&        true      ;
+        // const i = true   ;
+        console.log(i);
+
+        const j = 2 != 5 && 3 > 4 || 2 <= 14;
+        // const j = true && false  || true ; // && prioritaire sur || 
+        // const j = false  || true ; 
+        // const j = true ; 
+        console.log(j)
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
