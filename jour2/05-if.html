@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 05-if.html
+
+        // const let true false 
+        if (4 > 3) { // dans les parenthèses du if vous allez écrire une condition
+            // si la condition est true dans les parenthèses =>
+            // exécute les instructions dans les accolades
+            console.log("je suis la premiere condition");
+        }
+
+        if (2 > 3) { // false
+            console.log("je suis la deuxième condition"); // n'est pas exécutée
+        }
+
+        const loginBdd = "bonjour";
+        const passwordBdd = "1234560";
+
+        const loginSaisi = "bonjour";
+        const passwordSaisi = "123456";
+
+        // const verif = loginBdd == loginSaisi && passwordBdd == passwordSaisi;
+
+        if (loginBdd == loginSaisi && passwordBdd == passwordSaisi) {
+            // "bonjour" == "bonjour" && "1234560" == "123456"
+            // true && false
+            // false 
+            console.log("bienvenu dans votre boitemail !!");
+        } else { // si la condition précédent est false 
+            console.log("erreur lors de votre authentification");
+        }
+
+        const age = 30 ;
+        // si l'age est compris entre 0 et 18 => vous êtes mineur
+        // si l'age est compris entre 19 et 60 => vous êtes adulte
+        // si l'age est compris entre 60 et 120 => vous êtes senior
+        // sinon => vous êtes quoi
+        if( age > 0 && age < 18){
+            console.log("vous êtes mineur") ;
+        }
+        else if(age > 19 && age < 60 )
+        {
+            console.log("vous êtes adulte") ;
+        }
+        else if(age > 60 && age < 120){
+            console.log("vous êtes senior") ;
+        } 
+        else {
+            console.log("vous êtes quoi");
+        }
+
+    </script>
+</body>
+
+</html>
+<!--
+    créer le fichier 06-exo.html qui contient une balise script 
+
+    créer la variable ville = "Marseille"
+
+    si ville a pour valeur "Paris"
+    alors afficher dans la console "vous habitez à Paris"
+
+    si ville a pour valeur Boulogne ou Clamart ou Montrouge 
+    alors afficher dans la console "vous habitez dans le 92"
+
+    si ville a pour valeur Saint-Denis ou Aubervilliers ou Pantin
+     alors afficher dans la console "vous habitez dans le 93"
+
+    sinon
+    afficher dans la console "vous habitez hors d'Ile de France"
+
+-->
