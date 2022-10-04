@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 01-traitement-boolean.html
+
+        const test1 = true;
+
+        // créer une variable en faisant une comparaison 
+
+        const test2 = 10 > 2;
+
+        // si je touche plus de 40 000 € => je dois payer 20%
+        // si je touche moins de 40 000 € => je dois payer 5%
+        const seuilImpot = 40_000;
+
+        const monRevenu = 55_000;
+
+        const pourcentImpot = seuilImpot > monRevenu;
+        // const pourcentImpot = 40_000 > 55_000 ; 
+        // const pourcentImpot = false ; 
+        console.log(pourcentImpot);
+
+        // les opérateurs de comparaison 
+
+        // > strictement supérieur
+        // < strictement inférieur
+        // >= supérieur ou égal
+        // <= inférieur ou égal
+        // != différent
+        // == égal 
+        // === strictement égal 
+
+        // = tout seul n'est pas un opérateur de comparaison MAIS opérateur d'affectation 
+        // =< n'existe pas
+        // => n'existe pas
+
+        // <=>
+
+        const loginBdd = "azerty";
+
+        const loginSaisi = "Azerty";
+
+        const verif = loginBdd == loginSaisi;
+        //const verif = "azerty" == "Azerty" ; 
+        //const verif = false ; 
+        console.log(verif);
+
+        const age = 22;
+        const anciennete = "22";
+
+        const estAdulte = age == anciennete;
+        //const estAdulte = 22 == "22" ;
+        //const estAdulte = "22" == "22" ; il fut comparer number / string 
+        //                                 transtyper (change le type number // 
+        //                                             =>     string)
+        // const estAdulte = true
+        console.log(estAdulte);
+
+        const estAdulte2 = age === anciennete;
+        //const estAdulte2 = 22 === "22" ;
+        // const estAdulte2 = false
+
+        console.log(estAdulte2);
+
+
+
+
+
+    </script>
+</body>
+
+</html>
