@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // javascript langage client => exécuté dans le navigateur web 
+        // il est associé directement à la page .html que vous allez créer
+        // Il est OBLIGATOIRE écrire du javascript dans une balise spécifique 
+        // la balise <script>
+
+        // deux manières de faire des commentaires
+        // commentaire mono ligne
+        /* commentaire
+            multiligne 
+        */
+
+        // deux rôles pour les commentaires
+        // donner des explications 
+        // bloquer des instructions 
+
+        // quelque soit le langage utilisé : C , Python , Java , PHP ...
+        // découper le problème à traiter via des variables
+
+        // unité qui permet de stocker des informations 
+
+        // depuis la version de 2015 de javascript 2 manières de créer des variables
+
+        const nomVariable = "valeur";
+        let nomAutreVariable = "autre valeur";
+
+        // variable dont la valeur ne change pas pendant l'exécution du code = const
+        // variable dont la valeur change pendant l'exécution => let 
+        // bonne pratique utiliser const le plus possible 
+        // 5 types de valeurs que l'on peut stocker dans une variable
+        // string => texte / chaine de caractère
+        const etudiant = "Alain";
+        const distance = "30km";
+        const email = "alain@yahoo.fr";
+
+        // chiffre => number
+        const prix = 123;
+        const remise = -10;
+        const remise2 = -0.10; // moins 10 pourcent 
+        const grandNb = 1000000;
+        const grandNb2 = 1_000_000;
+
+        // boolean => valeur logique
+        const test1 = true;
+        const test2 = false;
+
+        // variable complexe => variable qui contiennent plusieurs valeurs
+        // tableau => array
+        // AltGR + 5
+        const courses = ["pomme", "poire", "abricot", true, 123, false, [1, 2, 3], {}];
+
+        const courses2 = [
+            "pomme",
+            "poire",
+            "abricot",
+            true,
+            123,
+            false,
+            [1, 2, 3],
+            {}
+        ];
+        // , utiliser dans []
+        // permet de séparer deux valeurs 
+
+        // objet => object
+        // AltGr + 4
+        const voiture = { propriete: "valeur1", propriete2: "valeur2" };
+
+        const voiture2 = {
+            propriete: "valeur1",
+            propriete2: "valeur2"
+        };
+
+        // opération / traitement de base sur les number 
+
+        //addition / soustraction / multiplication / division / puissance / modulo
+
+        const cal1 = 1 + 2;
+        const cal2 = 1 - 2;
+        const cal3 = 1 * 2;
+        const cal4 = 1 / 2;
+        const cal5 = 1 ** 2; // const calc5 = 1^2 en PHP 
+        const cal6 = 1 % 2;
+        console.log(cal6);
+
+        //  1 | 2
+        //  1 ---
+        //      0
+        //
+        //
+        //
+        //
+
+        // 10 / 3 = 3.3333333
+        // 10  = 3 * 3 + 1
+
+        // opération les chaines de caractères 
+
+        // concaténation = additionner des textes les uns avec les autres 
+        // former une texte dynamique 
+
+        const nom = "Alice" ;
+        const age = 20 ;
+        const level = "Junior" ;
+        // backtick AltGr + 7
+
+        // Julien a atteint le niveau Pro en 22 ans
+        // `${nom} a atteint le niveau ${level} en ${age} ans`
+        const phrase = `${nom} a atteint le niveau ${level} en ${age} ans`
+
+
+
+    </script>
+</body>
+
+</html>
