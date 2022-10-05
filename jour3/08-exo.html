@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const formation = ["HTML", 2, "CSS", 5, "semaines", "jours"];
+        /*
+            je suis une formation en HTML d'une durée de 5 jours
+            il m'a fallu 2 semaines pour comprendre en détail CSS
+            2 x 5 = 10
+            HTML et CSS sont des langages clients
+        */
+
+        // je suis une formation en HTML d'une durée de 5 jours
+        // je suis une formation en formation[0] d'une durée de formation[3] formation[5]
+        const p1 = "je suis une formation en " + formation[0] + " d'une durée de " + formation[3] + " " + formation[5];
+        const p2 = `je suis une formation en ${formation[0]} d'une durée de ${formation[3]} ${formation[5]}`
+
+        // il m'a fallu 2 semaines pour comprendre en détail CSS
+        // il m'a fallu formation[1] formation[4] pour comprendre en détail formation[2]
+        const p3 = "il m'a fallu " + formation[1] + " " + formation[4] + " pour comprendre en détail " + formation[2];
+        const p4 = `il m'a fallu ${formation[1]} ${formation[4]} pour comprendre en détail ${formation[2]}`
+
+        // 2 x 5 = 10
+        // formation[1] x formation[3] = formation[1] * formation[3]
+        const p5 = formation[1] + " x " + formation[3] + " = " + (formation[1] * formation[3])
+        const p6 = `${formation[1]} x ${formation[3]} = ${formation[1] * formation[3]}`
+
+        // HTML et CSS sont des langages clients
+        // formation[0] et formation[2] sont des langages clients
+        const p7 = formation[0] + " et " + formation[2] + " sont des langages clients"
+        const p8 = `${formation[0]} et ${formation[2]} sont des langages clients`
+
+        console.log(
+            p1 + '\n', // new line
+            p2 + "\n",
+            p3 + "\n",
+            p4 + "\n",
+            p5 + "\n",
+            p6 + "\n",
+            p7 + "\n",
+            p8,
+        )
+
+
+
+    </script>
+</body>
+
+</html>

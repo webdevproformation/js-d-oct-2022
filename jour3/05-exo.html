@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            4 x 2 = 8
+            4 x 4 = 16
+            4 x 6 = 24
+            4 x 8 = 32
+        */
+        console.log("solution 1")
+        // min 2
+        // max 8 inclu
+        // pas +2
+        // for(let i = min ; i <= max ; i+= pas ){
+        for (let i = 2; i <= 8; i += 2) {
+            console.log(`4 x ${i} = ${i * 4}`)
+        }
+
+        console.log("solution 2")
+        // min 8
+        // max 32 inclu
+        // pas +8
+        // for(let i = min ; i <= max ; i+= pas ){
+        for (let i = 8; i <= 32; i += 8) {
+            console.log(`4 x ${i / 4} = ${i}`);
+        }
+
+        // boucle 3 instructions
+        // créer une variable
+        // condition de sortie
+        // augmentation de la variable
+
+        for(let i = 2; i <= 8; i += 2){
+            // concaténation
+        }
+
+        let i = 2 ; 
+        while(i <= 8){
+            // concaténation
+            i += 2 ; 
+        }
+        /*
+            4 x 2 = 8
+            4 x 4 = 16
+            4 x 6 = 24
+            4 x 8 = 32
+        */
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    boucle 1 => 100 qui augmente de + 1
+    si le chiffre est un multiple de 3 => à la place du chiffre => fizz
+    si le chiffre est un multiple de 5 => à la place du chiffre => buzz
+    // bonus si multiple de 3 et 5 en même => à la place du chiffre => fizzbuzz
+    1
+    2
+    fizz
+    4
+    buzz
+    fizz
+    7
+    8
+    fizz
+    buzz
+    // multiple de 3 => 12 / 3 = 4 reste 0
+    // multiple de 3 => 11 / 3 = 3 reste 2         i % 3 == 0
+
+-->
