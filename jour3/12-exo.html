@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const vehicule = {
+            marque: "Renault",
+            anneeAchat: 2018,
+            km: 50_000,
+            controleTechniquePasse: false,
+            proprietaire: "Alain Doe"
+        }
+
+        /*
+        Alain Doe a acheté une Renault en 2018
+        le controlle technique doit être réalisé tous les 90000km, il reste 40000km avant le controle
+        en 2025, Alain Doe  aura acheté son véhicule depuis 7 ans
+        
+        */
+
+        const p1 = `${vehicule.proprietaire} a acheté une ${vehicule.marque} en ${vehicule.anneeAchat}`;
+
+        const p2 = `le contrôle technique doit être réalisé tous les 90000km, il reste ${90_000 - vehicule.km}km avant le controle`;
+
+        const p3 = `en 2025, Alain Doe  aura acheté son véhicule depuis ${2025 - vehicule.anneeAchat} ans`;
+
+        console.log(p1 + "\n", p2 + "\n", p3 + "\n")
+
+
+        if(vehicule.controleTechniquePasse){
+            console.log("la voiture est controlée")
+        }else {
+            console.log("le contrôle technique est à prévoir")
+        }
+    </script>
+</body>
+
+</html>
