@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 11-objet.html
+        // c'est le dernier type de variable que l'on va créer dans des projets javascript 
+        // comme pour les tableaux, il va être possible de stocker plusieurs valeurs dans une seule 
+
+        // créer un objet
+        // AltGr + 4 accolades
+        const toto = {
+            // stocker des valeurs => propriétés 
+            // nom de la propriété : "valeur de la propriété"
+            cp : 75000, 
+            prenom: "Alain",
+            age: 22,
+            adresse: "75 rue de Paris",
+            ville: "Pantin"
+        };
+        
+
+        // Alain habite à Pantin 
+        // toto.prenom habite à toto.ville
+        const p1 = `${toto.prenom} habite à ${toto.ville}`;
+        console.log(p1);
+
+        const toto2 = [
+            // stocker des valeurs => propriétés 
+            // nom de la propriété : "valeur de la propriété"
+            "Alain",
+            22,
+            "75 rue de Paris",
+            "Pantin"
+        ];
+
+        const p2 = `${toto[0]} habite à ${toto[3]}`;
+
+    </script>
+</body>
+
+</html>
+<!-- 
+    créer le fichier 12-exo.html qui contient un balise script
+
+    créer un objet qui s'appelle vehicule disposant des 5 propriétés suivantes :
+
+    marque : "Renault"
+    anneeAchat : 2018
+    km : 50_000
+    controleTechniquePasse : false 
+    proprietaire : "Alain Doe"
+
+    3 phrases suivantes :
+
+    Alain Doe a acheté une Renault en 2018
+    le controlle technique doit être réalisé tous les 90000km, il reste 40000km avant le controle
+    en 2025, Alain Doe  aura acheté son véhicule depuis 7 ans
+
+-->
