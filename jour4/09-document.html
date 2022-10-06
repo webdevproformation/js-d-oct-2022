@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="first">
+        <h1></h1>
+        <p></p>
+        <p class="toto"></p>
+        <h2 class="conclusion"></h2>
+    </section>
+    <section class="second">
+        <p></p>
+    </section>
+    <script>
+        // 09-document.html
+        document // une variable qui contient un objet qui contient tout ce que vous voyez l'écran 
+        /* 
+        { 
+            name : "nom de la page" ,
+            location : "adresse internet",
+            getElementById :
+            getQuerySelector :
+        } 
+        */
+        const p = `Bonjour les amis`;
+        document.querySelector("h1").innerHTML = p;
+
+        document.querySelector("p").innerHTML = "lorem ipsum";
+
+        document.querySelector(".conclusion").innerHTML = "je suis le titre de conclusion";
+
+        document.querySelector(".second p").innerHTML = "second"
+        // querySelector() fonction qui permet de sélectionner une balise dans le document
+        // le paramètre doit être string ET un sélecteur css 
+        /*
+        p{
+            color : green; 
+        }
+        .conclusion{
+            color : blue ;
+        }
+        */
+
+
+    </script>
+</body>
+
+</html>
