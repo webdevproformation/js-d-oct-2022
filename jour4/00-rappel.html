@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // boucle
+        // permet de répéter une ou plusieurs instructions
+        for (let i = 0; i < 50; i++) {
+
+        }
+        for (let i = 0; i < 50; i += 3) {
+
+        }
+        // 3 instructions dans les ()
+        // 1 créer une variable => i pour itérateur ;
+        // 2 comparaison => condition de sortie
+        // tant que cette condition est true => exécuter les instructions dans les {}
+        // 3 le pas / incrémentation en utilisant les opérateurs unaires
+        // ++
+        // +=
+        // valeur itérateur => minimum
+        // condition de sortie => maximum
+        // pas regarde la logique d'augmentation du l'itérateur 
+
+        // tableau 
+        // variable qui contient plusieurs valeurs 
+        const prix0 = 12.3;
+        const prix1 = 22.5;
+        const prix2 = 21;
+
+        const prix = [12.3, 22.5, 21]; // valeur
+        //             0      1       2  ; position / indexe 
+
+        // si j'ai besoin d'accéder à une valeur stockée dans le tableau prix 
+        // syntaxe suivante 
+        prix[0] // récupérer 12.3
+
+        const dernier = 2;
+        prix[dernier];
+        //prix[2] ; 
+        // 21 
+
+        prix[2];  // 21
+
+        const blabla = 2;
+        console.log(prix[blabla]); // 21 
+
+        // tableau + boucle 
+
+        const fleurs = ["lilas", "tulipes", "roses"];
+
+        // j'ai acheté des lilas
+        console.log(`j'ai acheté des ${fleurs[0]}`);
+        // j'ai acheté des tulipes
+        console.log(`j'ai acheté des ${fleurs[1]}`);
+        // j'ai acheté des roses
+        console.log(`j'ai acheté des ${fleurs[2]}`);
+
+        for (let i = 0; i <= 2; i++) {
+            console.log(`j'ai acheté des ${fleurs[i]}`);
+        }
+
+        // objet 
+
+        const etudiant = {
+            nom: "Alain", // propriété 
+            adresse: "75 rue de Paris", // nom propriété : valeur de la propriété ,
+            duree: 25,
+            budget: 2300.5,
+            unite: "euros",
+            nom: "Pierre"
+        };
+
+        etudiant.age
+        etudiant.adresse
+
+        // Alain        habite au 75 rue de Paris depuis 25 ans 
+        // `${etudiant.nom} habite au ${etudiant.adresse} depuis ${etudiant.age} ans`
+        const p = `${etudiant.nom} habite au ${etudiant.adresse} depuis ${etudiant.duree} ans`
+        console.log(p);
+
+
+    </script>
+</body>
+
+</html>
