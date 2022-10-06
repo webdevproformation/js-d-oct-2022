@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // combo objets dans un tableau 
+
+        const noms = ["Alain", "Céline", "Zorro"];
+        const ages = [22, 23, 24];
+        const adresses = ["15 rue de Paris", "20 rue de Marseille", "30 rue de Lille"];
+        // fusionner dans une seule variable de type tableau les différentes valeurs 
+        // JSON => JavaScript Object Notation => XML => HTML 
+        const etudiants = [
+            {
+                nom: "Alain",
+                age: 22,
+                adresse: "15 rue de Paris"
+            },
+            {
+                nom: "Céline",
+                age: 23,
+                adresse: "20 rue de Marseille"
+            },
+            {
+                nom: "Zorro",
+                age: 24,
+                adresse: "30 rue de Lille"
+            },
+            {
+                nom: "blabla"
+            }
+        ];
+
+        // Alain et Céline habitent au 30 rue de Lille
+        const p = `${etudiants[0].nom} et ${etudiants[1].nom} habitent au  ${etudiants[2].adresse} `;
+
+        // écrire la phrase suivante 
+        // Zorro               a 2 ans de plus que Alain 
+        // `${etudiants[2].nom} a ${etudiants[2].age - etudiants[0].age} ans de plus que ${etudiants[0].nom}` 
+        const p2 = `${etudiants[2].nom} a ${etudiants[2].age - etudiants[0].age} ans de plus que ${etudiants[0].nom}`;
+        console.log(p2);
+
+
+        console.log(etudiants[5]?.nom)
+
+
+    </script>
+</body>
+
+</html>
