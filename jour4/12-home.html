@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="11-style.css">
+</head>
+<body>
+    <main></main>
+    <script>
+        const data = [
+            {
+                url : "https://source.unsplash.com/random/400x200",
+                titre : "premier article",
+                contenu : "un peu de texte"
+            },
+            {
+                url : "https://source.unsplash.com/random/400x201",
+                titre : "deuxième article",
+                contenu : "un peu de texte"
+            },
+            {
+                url : "https://source.unsplash.com/random/400x202",
+                titre : "troisième article",
+                contenu : "un peu de texte"
+            }
+        ];
+
+        let html = "";
+        for(let i = 0 ; i <= 2 ; i++ ){
+            html += `<section>
+                <img src="${data[i].url}" alt="">
+                <h2>${data[i].titre}</h2>
+                <p>${data[i].contenu}</p>
+            </section>` ;
+        }
+
+        document.querySelector("main").innerHTML = html ;
+
+    </script>
+</body>
+</html>
