@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 07-return.html
+
+        function a(largeur, unite) {
+            // traitements
+
+            const prix = 1000;
+            // la variable prix est une portée // scope 
+            // variable n'est disponible QUE dans les { } de la fonction
+        }
+
+        // console.log(prix); // erreur !!!! 
+        // Uncaught ReferenceError: prix is not defined
+        // les variables stockées dans une fonction ne sont pas disponibles à l'extérieur de la fonction 
+
+        function b(largeur, unite) {
+            const prix = 1000;
+            return prix; // 1000
+        }
+
+        // le mot clé return permet de récupérer des valeurs stcokées dans une fonction 
+
+        const total = b(20, "cm");
+        // const total = 1000 
+        console.log(total);
+
+
+        function montantTTC(montantHT, tauxTVA, devise) {
+            const resultat = `${montantHT * tauxTVA} ${devise} TTC`;
+            return resultat;
+        }
+
+        // produit ordinateur 1000
+        // afficher le prix de l'ordinateur "1200 € TTC"
+
+        const prixOrdinateurTTC = montantTTC(1000, 1.2, "€");
+        console.log(prixOrdinateurTTC);
+
+        // j'ai acheté un ordinateur à 1200 € HT
+        const p = `j'ai acheté un ordinateur à ${montantTTC(1000, 1.2, "€")}`
+        console.log(p);
+
+        const p2 = `les horloges coûtent ${montantTTC(200, 1.2, "€")}`
+        console.log(p2);
+    </script>
+</body>
+
+</html>
+<!--
+    0/ créer le fichier 08-exo.html 
+
+    1/ déclarer une fonction min 
+
+    2/ cette fonction dispose de deux arguments a et b
+
+    3/ cette fonction dispose de deux instructions :
+    - si a est supérieur à b retourner la valeur de b 
+    - si a est inférieur ou égal à b retourner la valeur de a 
+
+    4/ exécuter la fonction min pour les valeurs suivantes :
+        a	b
+        4	3,4
+        2	-1
+        0	0
+       
+-->
