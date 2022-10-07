@@ -1,19 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button {
+            border: 1px solid red;
+        }
+    </style>
 </head>
+
 <body>
     <button></button>
     <p class="p1">premier 1er p</p>
     <p class="p2">premier 2eme p</p>
+    <!-- <input type="file"> -->
+
     <script>
         // 04-balise.html
 
-        
+        // sélectionner la balise <button> effectuer 2 modifications
+        // insérer dans la balise le texte "click"
+        document.querySelector("button").innerHTML = "click";
+        // modifier la mise en forme de la balise => bordure soit rouge 
+        document.querySelector("button").style["border"] = "1px solid red";
+        document.querySelector("button").style["font-size"] = "40px";
+
+        // sélectionner la balise qui a la class p1 
+        // 3 modifications 
+        // changer le texte présent par le suivante : "je viens de modifier le texte"
+        // changer le style de cette balise => texte souligné
+        // changer le style de cette balise => couleur du texte en rose 
+        document.querySelector(".p1").innerHTML = "je viens de modifier le texte";
+
+        document.querySelector(".p1").style["text-decoration"] = "underline";
+        document.querySelector(".p1").style.textDecoration = "underline";
+
+        document.querySelector(".p1").style["color"] = "pink";
+        document.querySelector(".p1").style.color = "pink";
+
+        // pour la balise ayant la class p2 faire 3 modifications
+        // aligner le texte à droite
+        // taille de police = 50px
+        // mettre les lettres en gras 
+
+        document.querySelector(".p2").style["text-align"] = "right";
+        document.querySelector(".p2").style.textAlign = "right";
+
+        /*  document.querySelector(".p2").style["font-size"] = "50px";
+         document.querySelector(".p2").style.fontSize = "50px";
+ 
+         document.querySelector(".p2").style["font-weight"] = "bold";
+         document.querySelector(".p2").style.fontWeight = "bold"; */
+
+        document.querySelector(".p2").style["font"] = "50px bold";
+        document.querySelector(".p2").style.font = "50px bold";
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/font
+        const a = {
+            nom: "Alain",
+            "bla titi": 12,
+            adressePrincipale: "30 rue de"
+        }
+        a.nom;
+        let prop = "nom"
+        a[prop]
+
+        console.log(a["bla titi"])
+
+
+
     </script>
 </body>
+
 </html>
