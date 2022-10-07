@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const panier = [
+            {
+                nom : "PS4" ,
+                prix : 500 , // virgule facultative
+            } ,
+            {
+                nom : "Nintendo DS" ,
+                prix : 200
+            } 
+            ,{
+                nom : "PS5" ,
+                prix : 700
+            } , // virgule facultative
+        ];
+
+        /*
+        <section>
+            <h2>PS4</h2>
+            <p>prix HT = 500 € </p>
+       
+        <section>
+            <h2>Nintendo DS</h2>
+            <p>prix HT = 200 € </p>
+      
+        <section>
+            <h2>PS5</h2>
+            <p>prix HT = 700 € </p>
+        </section>
+        */
+        let texte = "";
+        for(let i = 0 ; i <=2 ; i++){
+            texte += `<section>
+                    <h2>${panier[i].nom}</h2>
+                    <p>prix HT = ${panier[i].prix} € </p>
+                    </section>` ;
+        }
+        document.querySelector("div").innerHTML = texte ;
+
+        const num = 75 ;
+        const rue = "rue de Paris";
+        const ville = "Marseille"
+
+        // "75 rue de Paris Marseille"
+        const adresse = `${num} ${rue} ${ville}`;
+
+        let adresse2 = 75 ; 
+            adresse2 = adresse2 + " rue de Paris" ;
+            adresse2 = adresse2 + " Marseille" ;
+
+        let adresse3 = 75 ; 
+            adresse3 +=  " rue de Paris" ;
+            adresse3 +=  " Marseille" ;
+
+
+
+    </script>
+</body>
+</html>
