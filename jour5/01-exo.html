@@ -18,7 +18,58 @@
 
         document.querySelector("h1").innerHTML = "Exo de la journée 5";
         // Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')
+
+        const sommaire = ["js", "html", "css", "php"];
+
+        /*
+            dans la balise ayant la class exemple ecrire / injecter le texte suivant
+            <ul>
+                <li>js</li>
+                <li>html</li>
+                <li>css</li>
+                <li>php</li>
+            </ul>
+        */
+        let texte = "<ul>";
+        for (let i = 0; i <= 3; i++) {
+            texte += `<li>${sommaire[i]}</li>`
+        }
+        texte += "</ul>";
+
+        document.querySelector(".exemple").innerHTML = texte;
     </script>
 </body>
 
 </html>
+
+<!--
+    créer le fichier 02-exo.html
+    contient 3 balises html 
+    h1 
+    div
+    div qui a la class conclusion 
+    script  
+        1 remplir la balise h1 avec le texte suivant 
+            "exo2 <small>pour comprendre l'injection</small>"
+
+        2 remplir la div sans class avec le texte suivant 
+         "<p>lorem ipsum</p>
+         <p> sed igor </p>"
+         
+        3  créer une variable de type tableau qui s'appelle conclusion
+         qui contient les 5 textes suivants : Angular React jQuery VueJS Svelte
+
+        4 insérer / injecter dans la balise qui a la class conclusion le texte suivant
+         <ul>
+            <li>je vais apprendre : Angular</li>
+            <li>je vais apprendre : React</li>
+            <li>je vais apprendre : jQuery</li>
+            <li>je vais apprendre : VueJS</li>
+            <li>je vais apprendre : Svelte</li>
+         </ul>
+           
+
+
+         
+
+-->

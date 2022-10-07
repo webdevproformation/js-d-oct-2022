@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <div></div>
+    <div class="conclusion"></div>
+    <script>
+        document.querySelector("h1").innerHTML = "exo2 <small>pour comprendre l'injection</small>";
+
+        document.querySelector("div").innerHTML = `<p>lorem ipsum</p>
+         <p> sed igor </p>`;
+
+        const conclusion = ["Angular" , "React" , "jQuery" , "VueJS" , "Svelte"];
+        /*
+        <ul>
+            <li>je vais apprendre : Angular</li>
+            <li>je vais apprendre : React</li>
+            <li>je vais apprendre : jQuery</li>
+            <li>je vais apprendre : VueJS</li>
+            <li>je vais apprendre : Svelte</li>
+         </ul>
+        */
+       let texte = "<ul>" ;
+        for(let i = 0 ; i <= 4 ; i++ ){
+            texte += `<li>je vais apprendre : ${ conclusion[i] }</li>`
+        }
+           texte += "</ul>" ;
+
+        document.querySelector(".conclusion").innerHTML = texte ;
+    </script>
+</body>
+</html>
