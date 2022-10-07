@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- p*3>lorem4 -->
+    <h1 id="titre"></h1>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Labore dolores qui aut!</p>
+    <p>Aliquid sed et id!</p>
+    <h2 class="conclusion"></h2>
+    <script>
+        // ES6 de javascript à partir de 2015
+        // document.querySelector()
+
+        // avant vers 6 de javascript => on utilisait une multitude de méthode 
+        document.getElementById("titre")
+        // document.querySelector("#titre")
+        document.getElementsByTagName("p")[0]
+        document.getElementsByTagName("p")[2]
+
+        document.getElementsByClassName("conclusion")[0]
+
+        document.querySelector("p") // récupérer uniquement le 1er p de la page 
+        document.querySelectorAll("p")[2] // récupérer le dernier p de la page  
+
+    </script>
+
+</body>
+</html>
+<!--
+    créer une page 08-exo.html
+    1 h1 vide
+    3 p vide
+    1 h1 vide
+    1 p vide 
+    script  
+        remplir le 1er h1 vers le texte suivant = "exo final"
+        remplir les 2 premiers p = "lorem ipsum"
+        remplir les 3ème  p = "un peu de texte"
+        le deuxième h1 avec "conclusion"
+        le dernier p avec je sais manipuler le DOM
+        
+-->
