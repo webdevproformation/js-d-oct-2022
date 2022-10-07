@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // fonction => function
+        // variable dans laquelle on stocke des instructions 
+
+        // syntaxe => comment créer une fonction
+        function a() {
+            const toto = 10;
+            const tata = 30;
+            if (toto > tata) {
+                console.log("super ");
+            }
+        }
+
+        // le fait de créer une fonction EST une action de STOCKAGE 
+
+        // si on veut utiliser les instructions stockées dans le fonction
+        // exécuter la fonction (utiliser la syntaxe suivante )
+        a();
+
+        //console.log(total);
+
+        function b() {
+            const total = 1000;
+            const resultat = total * 30;
+        }
+        //console.log(total);
+
+        // rentrée des informations dans la fonction (input)
+        // ajouter des paramètres la fonction
+        function c(largeur, hauteur, unite) {
+            const phrase = `${largeur * hauteur} d'un carré en ${unite} `;
+        }
+        c(100, 10, "px");
+        // récupérer / retourner des valeurs qui ont été calculées dans la fonction (output)
+        function d() {
+            const auteur = "Victor";
+            const nom = "Hugo";
+            return `${auteur} ${nom}`;
+        }
+        const auteurFr = d();
+
+        // fonction qui a un input (argument) ET un output (récupère retourne) une concaténation  
+        function convertirDollarEuro(montant) {
+            const montantEnEuro = `${montant * 1.02} €`;
+            // https://www.xe.com/
+            return montantEnEuro;
+        }
+
+        // j'ai 2000 Dollars qui est l'équivalent de xxxxx € 
+        // `j'ai 2000 Dollars qui est l'équivalent de ${convertirDollarEuro( 2000 )} `
+        const p = `j'ai 2000 Dollars qui est l'équivalent de ${convertirDollarEuro(2000)} ` ;
+        console.log(p);
+
+        // DOM => Document Object Model
+        // javascript va créer une variable document avant la balise <script>
+        // cette variable est un objet 
+        // une des propriétés de la variable document.querySelector()
+        // querySelector() permet de sélectionner une balise dans la page web
+        // dans les () de querySelector() => on va mettre un selecteur css 
+        document.querySelector("p") ; // sélectionner moi le 1er paragraphe de la page web
+        document.querySelector("h2") ; // sélectionner moi le 1er titre de niveau 2 de la page web
+        document.querySelector(".toto") ; // sélectionner moi la 1ere balise qui a la class="toto"
+        document.querySelector("#titi") ; // sélectionner moi la 1ere balise qui a la id="titi"
+        document.querySelector("div .first") ; // sélectionner moi la 1ere balise qui est un enfant  
+                                               // d'une div et qui a la class .first
+
+        
+        document.querySelector("div .first").innerHTML = "texte";
+
+        const blabla = "coucou les amis"
+        document.querySelector("div .first").innerHTML = blabla;
+
+        const phrase2 = `ne jamais dire ${blabla}` ;
+        document.querySelector("div .first").innerHTML = phrase2;
+
+
+        const vehicule = ["Renault", "Peugeot", "Nissan"];
+        let texte = "";
+        for(let i = 0; i <= 2 ; i++){
+            texte += `<p>${vehicule[i]}</p>` ;
+        }
+        document.querySelector("div .first").innerHTML = texte  ; 
+
+
+
+
+
+    </script>
+</body>
+
+</html>
