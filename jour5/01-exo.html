@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1></h1>
+    <div class="exemple"></div>
+    <script>
+        // quand on a besoin de Manipuler la page web via javascript => DOM
+        // il est conseillé de mettre la balise script à la suite des balises html 
+
+        document.querySelector("h1").innerHTML = "Exo de la journée 5";
+        // Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')
+    </script>
+</body>
+
+</html>
