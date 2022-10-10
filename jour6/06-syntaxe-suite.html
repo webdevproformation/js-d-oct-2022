@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        // 1er p => bonjour
+        // 2ème p => hello
+        // 3ème p => hola 
+
+        document.querySelectorAll("p")[0].innerHTML = "Bonjour";
+        document.querySelectorAll("p")[1].innerHTML = "hello";
+        document.querySelectorAll("p")[2].innerHTML = "hola";
+
+        for(let i = 0 ; i <= 2 ; i++){
+            document.querySelectorAll("p")[i].innerHTML = "coucou";
+        }
+
+        for(let i = 0 ; i <= 2 ; i++){
+            $("p").eq(i).html("coucou");
+        }
+
+        $("p").html("coucou");
+        // automatiquement $("selecteur") fait une boucle 
+
+        $("p").first().html("toto");
+        $("p").eq(0).html("toto");
+
+        $("p").eq(1).html("tutu");
+
+        $("p").eq(2).html("titi");
+        $("p").last().html("titi");
+
+    </script>
+</body>
+
+</html>

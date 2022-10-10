@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (section>p*3>lorem5)+section.toto>p*4>lorem2  -->
+    <section>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Nihil eaque doloremque est placeat?</p>
+        <p>Ratione voluptas quae unde nemo.</p>
+    </section>
+    <section class="toto">
+        <p>Lorem, ipsum.</p>
+        <p>Dicta, quaerat?</p>
+        <p>Nisi, reprehenderit.</p>
+        <p>Delectus, rem?</p>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        // modifier le dernier p qui est stocké dans la section qui a la class="toto"
+
+        $(".toto").find("p").last().html("blabla")
+    </script>
+
+</body>
+</html>

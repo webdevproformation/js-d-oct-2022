@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // .js
+        // .min.js 
+        // .map 
+        // en js de base => js vanilla 
+        document.querySelector("p").innerHTML = "blabla";
+        document.querySelector("p").style["font-size"] = "20px";
+        document.querySelector("p").style.fontSize = "20px";
+        document.querySelector("p").style["color"] = "red";
+
+        // la version jQuery 
+        $("p").html("blibli");
+        $("p").css("font-size", 20);
+        $("p").css("color", "red");
+
+        // jquery accepte le chainage 
+
+        $("p").html("bloublou").css("font-size", 20).css("color", "red");
+
+        $("p").html("blublu")
+            .css("font-size", 20)
+            .css("color", "red");
+
+        $("p").html("blublu")
+            .css({
+                "font-size" : 20 ,
+                "color" : "red"
+            });
+
+        const selecteur = "p";
+        const texte = "coucou"
+        const style = {
+            "font-size" : 20 ,
+            "color" : "red"
+        }
+
+        $(selecteur).html(texte).css(style) ;
+    </script>
+</body>
+
+</html>
+<!--
+    créer le fichier 05-exo.html
+    h1 
+    p 
+    télécharger jquery
+    script 
+        remplir la balise h1 avec le texte "titre 1" et centrer la balise dans la page web
+        remplir la balise p avec le texte "lorem ipsum" et souligner ce texte et mettre les lettres en majuscule
+
+-->
