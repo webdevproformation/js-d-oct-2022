@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- (section>p*3>lorem5)+section.toto>p*4>lorem2  -->
     <section>
@@ -25,7 +27,23 @@
         // modifier le dernier p qui est stocké dans la section qui a la class="toto"
 
         $(".toto").find("p").last().html("blabla")
+        // $("h2") => sélectionne toutes les balises respectant la selection mentionné dans les ()
+
+        // $("h2").first()
+        // $("h2").eq(0)
+
+        // $("h2").last()
+        // $("h2").eq(10)
+
+        // je veux sélectionner la dernière <p> qui est contenu dans la balise <article>
+
+        // $("article").find("p").last().html().css()
+
     </script>
 
 </body>
+
 </html>
+<!--
+    08-exemple.html
+-->

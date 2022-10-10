@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- article*4>(h2>lorem4)p>lorem10 -->
+    <header>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, incidunt.</p>
+    </header>
+    <article>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, incidunt.</p>
+    </article>
+    <article>
+        <h2>Quia excepturi ullam impedit!</h2>
+        <p>Voluptate, repellendus debitis. Velit accusamus quisquam exercitationem expedita provident aperiam.</p>
+    </article>
+    <article>
+        <h2>Aliquid fugit nostrum deserunt!</h2>
+        <p>Facere dignissimos officiis hic excepturi aut animi reiciendis ullam et!</p>
+    </article>
+    <article>
+        <h2>Non laboriosam corporis quia.</h2>
+        <p>Neque, voluptatum sed quo nisi nemo earum hic fuga recusandae?</p>
+    </article>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        // je veux modifier le texte dans tous les p stockés dans des balises article
+        $("article").find("p").html("modification du texte")
+
+    </script>
+</body>
+
+</html>
+<!--
+    créer le fichier 09-exo.html
+    Créer un nouveau fichier contenant les balises html suivantes :
+
+    une section avec 3 listes
+        ul avec 4 li  
+        ol class jour avec 3 li
+        ol class annee avec 5 li 
+
+    Avec jQuery, réaliser les modifications suivantes du DOM :
+    1 remplir le 1er li du ul avec le texte jquery
+    2 remplir le 2eme li du ul avec le texte bootstrap
+    3 remplir tous les li de l'élément avec la class jour avec le texte : 02/12/2019
+    4 pour la dernière liste, remplir le premier li avec le texte : bonjour
+    5 pour la dernière liste, remplir le dernier li avec le texte : final
+
+-->

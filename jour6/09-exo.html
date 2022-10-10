@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- section>(ul>li*4)+(ol.jour>li*3)+ol.annee>li*5 -->
+    <section>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ol class="jour">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <ol class="annee">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        // 1 remplir le 1er li du ul avec le texte jquery
+        $("ul li").first().html("jquery");
+        $("ul").find("li").first().html("jquery");
+        $("ul").find("li").eq(0).html("jquery");
+        $("ul li:first-child").html("jquery");
+
+        // 2 remplir le 2eme li du ul avec le texte bootstrap
+        $("ul li").eq(1).html("bootstrap");
+        $("ul").find("li").eq(1).html("bootstrap");
+        $("ul li:nth-child(2)").html("bootstrap");
+
+        //3 remplir tous les li de l'élément avec la class jour avec le texte : 02/12/2019
+        $(".jour li").html("02/12/2019");
+        $(".jour").find("li").html("02/12/2019");
+        $("ol").first().find("li").html("02/12/2019");
+
+        // 4 pour la dernière liste, remplir le premier li avec le texte : bonjour
+        $("ol").last().find("li").first().html("bonjour")
+        $(".annee").find("li").first().html("bonjour")
+        $(".annee li").first().html("bonjour")
+        $(".annee li:first-child").html("bonjour")
+
+        // 5 pour la dernière liste, remplir le dernier li avec le texte : final
+        $("ol").last().find("li").last().html("final")
+        $("ol").last().find("li").eq(4).html("final")
+        $(".annee").find("li").last().html("final")
+        $(".annee li").last().html("final")
+        $(".annee li:last-child").html("final")
+    </script>
+</body>
+
+</html>
