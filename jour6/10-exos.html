@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        let texte = "";
+        for (let i = 0; i <= 3; i++) {
+            // exécute 4 fois les instructions dans les {}
+            texte += `<article>
+                <h2>lorem</h2>
+                <p>lorem10mots</p>
+            </article>`;
+        }
+        // "<article><h2>lorem</h2><p>lorem10mots</p></article><article><h2>lorem</h2><p>lorem10mots</p></article><article><h2>lorem</h2><p>lorem10mots</p></article><article><h2>lorem</h2><p>lorem10mots</p></article>"
+        $(".container").html(texte)
+                    .css("display" , "grid" )
+                    .css("grid-template-columns" , "repeat(2,1fr)" );
+        
+        $("article").first().find("h2").html("premier article");
+        //  $("article") sélectionne toutes les balises <article>
+        // .first() => je veux que la 1er balise <article>
+        // .find("h2") => dans cette 1er balise <article> cherche la balise <h2>
+        // .html("premier article")
+        // cette 1er balise <article> ayant une balise <h2> changer le texte par "premier article"
+        $("article").last().find("p").html("lire la suite");
+
+        $("article").eq(1).find("h2").html("deuxieme")
+        $("article").eq(1).find("p").html("deuxieme")
+    </script>
+</body>
+
+</html>

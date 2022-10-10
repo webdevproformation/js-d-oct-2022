@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- article*3>(h2>lorem1)+p>lorem20 -->
+        <article>
+            <h2>Lorem.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima sequi ratione temporibus laudantium
+                nobis recusandae vero libero eos? Aut ipsa nostrum officiis! Atque tenetur qui odio repellendus,
+                officiis dolorem deleniti incidunt ipsum fugiat sint suscipit voluptate, accusantium iusto dicta
+                molestias? Enim, esse, consequuntur eos assumenda hic soluta error molestias sint omnis dolores maiores
+                facere vitae minus deserunt saepe qui ipsum quasi voluptates dignissimos reprehenderit repudiandae
+                laboriosam nulla rerum! Dicta vitae distinctio natus voluptas adipisci hic soluta, commodi aut debitis
+                error quas! Libero ea, magnam reiciendis fugiat quam sunt at accusamus eum nulla, adipisci soluta! Vel,
+                incidunt. Aspernatur odit provident assumenda velit voluptate delectus ipsam, debitis expedita sapiente
+                asperiores similique amet. Atque nihil qui minima ducimus nemo, modi perferendis tenetur, repudiandae
+                fugiat in molestiae fugit quaerat id explicabo, cum reprehenderit consequuntur aperiam exercitationem
+                officiis reiciendis repellendus. Aliquam iste nemo quam quisquam, inventore maxime dolorum hic corrupti
+                eveniet necessitatibus rerum quo quod dolores doloremque ratione officiis tenetur enim. Magnam
+                laudantium quo odio possimus! Molestias aperiam quam, placeat blanditiis, facilis voluptas aliquam optio
+                repudiandae, quibusdam quidem qui tenetur! Veniam reiciendis recusandae rerum, quis voluptas asperiores
+                omnis velit nisi, at, voluptatibus expedita tempora doloribus officiis! Consequuntur debitis iusto,
+                recusandae iste, accusamus enim doloremque voluptate quod inventore doloribus nemo, provident
+                accusantium vel officia necessitatibus quasi. Tempora, expedita nulla debitis repellat minus veritatis
+                praesentium iusto laborum ducimus vel consectetur consequuntur vero hic neque non itaque saepe possimus
+                obcaecati ipsum dolore et temporibus, ratione nobis suscipit? Possimus deserunt minus itaque maiores.
+                Excepturi laboriosam incidunt tenetur amet reiciendis optio, officia libero eaque illum, porro beatae
+                odit. Culpa distinctio ad dolores repellat ea quibusdam eveniet suscipit enim, consequatur praesentium?
+                Officiis ullam quam, totam nihil ea temporibus illum? Numquam at aperiam, excepturi officiis sapiente
+                culpa soluta saepe magni impedit quod aspernatur blanditiis delectus iure sint. Quo facilis fugiat atque
+                molestias, omnis reprehenderit nam obcaecati? Voluptatem, totam? Odio suscipit quasi tenetur voluptas.
+                Consequuntur corrupti consequatur dolorem eum dignissimos neque nesciunt labore laudantium itaque,
+                asperiores reiciendis suscipit. Deleniti facere, suscipit aspernatur tenetur velit distinctio vero hic
+                saepe nesciunt aliquam beatae at deserunt molestias. Eligendi nulla saepe obcaecati! Quae delectus, nemo
+                sed optio ullam, repellat blanditiis maiores hic earum ex sequi nam voluptatum similique culpa, totam
+                aperiam reiciendis voluptatem suscipit nesciunt sapiente saepe minus recusandae? Fugiat consequuntur
+                nulla voluptates vel nesciunt blanditiis nemo sed, ducimus similique. Possimus accusamus corporis ea
+                itaque, a amet? Hic animi quasi voluptate. Nihil voluptas alias delectus earum eveniet.</p>
+        </article>
+        <article>
+            <h2>Cum.</h2>
+            <p>Quod delectus soluta, dolorum dicta cumque aliquid dolor quibusdam a! Facilis sit delectus odio sed omnis
+                expedita veritatis consequuntur odit!</p>
+        </article>
+        <article>
+            <h2>Eius.</h2>
+            <p>Expedita fugiat incidunt nulla porro laudantium voluptatum molestiae ipsam ut cupiditate quo esse, et a.
+                Cum, praesentium dolor! Placeat, similique?</p>
+        </article>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(".container").css({
+            "display": "flex",
+            "justify-content": "space-between",
+            "width": "900px",
+            "margin": "0 auto",
+            "font-family": "sans-serif",
+        })
+        $("article").css({
+            "width": "32%"
+        })
+        $("article").last().find("h2").html("jquery");
+        $("article").first().find("p").html("modification");
+        $("article").eq(1).find("h2").html("deuxieme");
+    </script>
+</body>
+
+</html>

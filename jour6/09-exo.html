@@ -49,18 +49,36 @@
         $("ol").first().find("li").html("02/12/2019");
 
         // 4 pour la dernière liste, remplir le premier li avec le texte : bonjour
-        $("ol").last().find("li").first().html("bonjour")
-        $(".annee").find("li").first().html("bonjour")
-        $(".annee li").first().html("bonjour")
-        $(".annee li:first-child").html("bonjour")
+        $("ol").last().find("li").first().html("bonjour") ;
+        $(".annee").find("li").first().html("bonjour") ;
+        $(".annee li").first().html("bonjour") ;
+        $(".annee li:first-child").html("bonjour") ;
 
         // 5 pour la dernière liste, remplir le dernier li avec le texte : final
-        $("ol").last().find("li").last().html("final")
-        $("ol").last().find("li").eq(4).html("final")
-        $(".annee").find("li").last().html("final")
-        $(".annee li").last().html("final")
-        $(".annee li:last-child").html("final")
+        $("ol").last().find("li").last().html("final") ;
+        $("ol").last().find("li").eq(4).html("final") ;
+        $(".annee").find("li").last().html("final") ;
+        $(".annee li").last().html("final") ;
+        $(".annee li:last-child").html("final") ;
     </script>
 </body>
 
 </html>
+<!--
+    10-exo.html
+    créer un nouveau fichier html
+        ce fichier contient une div qui a la class container
+
+        importer jquery
+        script qui votre code  jquery 
+        - remplir le container avec 4 articles 
+        chaque article dispose du html suivant :
+            <article>
+                <h2>lorem</h2>
+                <p>lorem10mots</p>
+            </article>
+        - pour le premier article changer le titre par "premier article"
+        - pour le dernier article changer le p avec le texte suite : "lire la suite"
+        - pour le deuxième article changer le titre et le paragraphe avec le texte suivante "deuxième" et "deuxieme"
+        - mettre en place un système de grille à 2 colonnes avec un gap de 10px sur le container
+-->
