@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>action</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam!</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function action() {
+           /*  if ($("p").hasClass("masquer")) {
+                $("p").removeClass("masquer")
+                // $("p").fadeIn();
+                $("p").slideDown()
+            } else {
+                $("p").addClass("masquer")
+                // $("p").fadeOut();
+                $("p").slideUp()
+            } */
+            //$("p").fadeToggle();
+            $("p").slideToggle();
+        }
+
+        $("button").on("click", action)
+
+        $("p").animate()
+    </script>
+</body>
+
+</html>
