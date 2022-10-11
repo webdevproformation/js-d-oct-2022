@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .articles{
+            width: 700px;
+            margin: 0 auto;
+            
+        }
+        .article_une img{
+            width: 100%;
+        }
+        .article_une p{
+            text-align: justify;
+            font-family: sans-serif;
+        }
+        .article_autre{
+            display: flex;
+            justify-content: space-between;
+        }
+        .article_autre h3{
+            width: 32%;
+        }
+    </style>
+</head>
+<body>
+    <section class="articles">
+        <header class="article_une">
+            <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, nostrum.</h2>
+            <img src="https://via.placeholder.com/800x400" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias neque praesentium maiores, excepturi, ab magni aliquid fugiat at voluptas hic vel itaque laudantium doloremque blanditiis asperiores id, facilis animi. Odio sit dignissimos ex debitis rem officia ipsam? Ex, iusto accusamus?</p>
+        </header>
+        <div class="article_autre">
+            <!-- h3*3>lorem8 -->
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+            <h3>Praesentium hic suscipit necessitatibus exercitationem provident blanditiis repudiandae.</h3>
+            <h3>Totam veritatis nam libero quod cupiditate quibusdam deleniti?</h3>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $("p").html("lorem ipsum blablablabla") ;
+        $("h3").last().html("Dernier article sur le sujet") ;
+    </script>
+</body>
+</html>

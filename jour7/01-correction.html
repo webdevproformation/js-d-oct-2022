@@ -10,34 +10,41 @@
         .diaporama {
             width: 900px;
             margin: 0 auto;
-            border: 2px solid red;
         }
+
         /* partie haute */
         .diaporama_main {
             display: flex;
             margin-bottom: 10px;
         }
+
         .diaporama_main img {
             width: 60%;
         }
+
         .diaporama_main div {
             padding: 30px;
             background: rgba(0, 0, 0, 0.1);
         }
+
         /* partie basse */
         .diaporama_miniature {
-            display: flex; /* selectionne la balise PARENT qui va impacter sur les balises enfants directs */
+            display: flex;
+            /* selectionne la balise PARENT qui va impacter sur les balises enfants directs */
             justify-content: space-between;
             /* draw.io // https://paint.js.org/ */
         }
+
         .diaporama_miniature div {
             width: calc((100% - 40px)/5);
             font-weight: bold;
         }
+
         .diaporama_miniature div img {
             width: 100%;
             border-radius: 8px;
         }
+
         body {
             font-family: sans-serif;
         }
@@ -81,12 +88,15 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
-        $("h2").html("jquery") ;
-        $(".diaporama_miniature").find("p")
-                                 .eq(2)
-                                 .html("article en cours") ;
+        $("h2").html("jquery");
+        $(".diaporama_miniature")
+            .find("p")
+            .eq(2)
+            .html("article en cours")
+            .css("color", "red");
     </script>
 
 </body>
 
 </html>
+
