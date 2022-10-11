@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        article{
+            width: 32%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <article>
+            <h2>Lorem.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vitae rem sint voluptates officiis in eum impedit eius ullam asperiores?</p>
+        </article>
+        <article>
+            <h2>Lorem.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero numquam maiores quis vitae maxime optio neque porro dolorum cum labore?</p>
+        </article>
+        <article>
+            <h2>Lorem.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa labore exercitationem adipisci beatae, quisquam doloremque asperiores itaque ipsum recusandae voluptas, deleniti possimus praesentium! Consectetur itaque reiciendis minus repudiandae illum? In.</p>
+        </article>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $("p").after("<button>lire la suite</button>");
+        $("p").first().before(`<img src="https://via.placeholder.com/400x200" alt="">`);
+        $("img").css("width", "100%");
+        $("p").last().append(" ... ");
+        let texte = "";
+        let texteDernierP = $("p").last().html().split(" ")
+        for(let i = 0 ; i < 15 ; i++){
+            texte += texteDernierP[i] + " "
+        }
+        $("p").last().html(texte + " ...");
+    </script>
+</body>
+</html>
