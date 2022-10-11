@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p data-color="blue" data-size="30px" data-prefix-texte="...">Lorem ipsum dolor sit amet.</p>
+    <p data-color="red" data-size="12px" data-prefix-texte="lire la suite">Lorem ipsum dolor sit amet.</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        const p1 = {
+            color : "blue",
+            size : "30px",
+            prefixTexte : "..."
+        }
+        const color = $("p").first().data("color") ;
+        console.log(color);
+        for(let i = 0 ; i <= 1 ; i++){
+            $("p").eq(i).css("color" , $("p").eq(i).data("color"))
+                        .css("font-size" , $("p").eq(i).data("size"))
+                        .append( $("p").eq(i).data("prefix-texte"));
+        }
+        
+    </script>
+</body>
+</html>
