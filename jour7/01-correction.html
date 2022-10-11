@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .diaporama {
+            width: 900px;
+            margin: 0 auto;
+            border: 2px solid red;
+        }
+        /* partie haute */
+        .diaporama_main {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .diaporama_main img {
+            width: 60%;
+        }
+        .diaporama_main div {
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        /* partie basse */
+        .diaporama_miniature {
+            display: flex; /* selectionne la balise PARENT qui va impacter sur les balises enfants directs */
+            justify-content: space-between;
+            /* draw.io // https://paint.js.org/ */
+        }
+        .diaporama_miniature div {
+            width: calc((100% - 40px)/5);
+            font-weight: bold;
+        }
+        .diaporama_miniature div img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="diaporama">
+        <header class="diaporama_main">
+            <img src="https://via.placeholder.com/800x400" alt="">
+            <div>
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est voluptate illo consequatur incidunt
+                    tempora enim.</p>
+                <a href="#">Lorem, ipsum dolor.</a>
+            </div>
+        </header>
+        <section class="diaporama_miniature">
+            <!-- div*5>img[src="https://via.placeholder.com/800x400"]+p>lorem5 -->
+            <div>
+                <img src="https://via.placeholder.com/800x400" alt="">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/800x400" alt="">
+                <p>Repellat earum itaque ea soluta.</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/800x400" alt="">
+                <p>Suscipit molestias ut placeat nisi!</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/800x400" alt="">
+                <p>Obcaecati sunt doloribus deleniti vel!</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/800x400" alt="">
+                <p>Accusantium perferendis blanditiis perspiciatis nemo.</p>
+            </div>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $("h2").html("jquery") ;
+        $(".diaporama_miniature").find("p")
+                                 .eq(2)
+                                 .html("article en cours") ;
+    </script>
+
+</body>
+
+</html>
