@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p{
+            transition: all 0.3s;
+        }
+        .masquer{
+            transform: translate3d(50px, -50px);
+            opacity: 0;
+        }
+    </style>
 </head>
+
 <body>
     <button>Action</button>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, unde.</p>
+    <p>🐇 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, unde. 🐤</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        // emojipedia.org
+        // js de base
+        // function action(){}
+        //document.querySelector("button").addEventListener("click" , action);
+        function action(){
+            if(!$("p").hasClass("masquer")){
+                $("p").addClass("masquer");
+            }else {
+                $("p").removeClass("masquer");
+            }
+        }
+        $("button").on("click" , action );
+    </script>
 </body>
+
 </html>
+
+<!-- 
+    créer une nouvelle page 11-exo.html
+    button 
+    menu 
+    <ul>
+        <li>Accueil</li>
+        <li>Blog</li>
+        <li>Contact</li>
+    </ul>
+
+    cliquer sur le bouton un fois masquer le menu (glisser vers la droite + opacité 0)
+    recliquer sur le bouton afficher le menu (glisser vers la gauche + opacité 1)
+
+-->

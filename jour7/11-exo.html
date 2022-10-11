@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            transition: 0.3s all;
+        }
+        ul.un-peu{
+            opacity: 0.5;
+        }
+        .masquer{
+            opacity: 0;
+            transform: translateX(100px);
+        }
+    </style>
+</head>
+<body>
+    <button>menu</button>
+    <ul>
+        <li>Accueil</li>
+        <li>Blog</li>
+        <li>Contact</li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function action (){
+            if(!$("ul").hasClass("masquer")){
+                $("ul").addClass("masquer")
+            }else { 
+                $("ul").removeClass("masquer")
+                $("ul").addClass("un-peu")
+            } 
+            //$("ul").toggleClass("masquer") ;
+        }
+        $("button").on("click" , action );
+    </script>
+</body>
+</html>
