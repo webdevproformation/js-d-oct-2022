@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- p*5>lorem5 -->
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Sequi ab delectus in dolore.</p>
+    <p>Est sit deserunt atque voluptatibus?</p>
+    <p>Unde minima distinctio veniam expedita?</p>
+    <p>A repudiandae officia pariatur quis?</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        /*
+        - mettre tous les p en couleur rouge
+        - mettre le 1er p sur fond rose
+        - mettre le dernier p sur fond vert
+        - si le p est impair ajouter le texte "impair" en début de p
+        - si le p est pair ajouter le texte "pair" en fin de p
+        
+        */
+       $("p").css("color" , "red")
+       $("p").first().css("background", "pink");
+       $("p").last().css("background", "green");
+
+       /* $("p").eq(0).prepend("impair")
+       $("p").eq(2).prepend("impair")
+       $("p").eq(4).prepend("impair")
+
+       $("p").eq(1).append("pair")
+       $("p").eq(3).append("pair") */
+
+       /* for(let i = 0 ; i <= 4 ; i++){
+        if(i%2 == 0){
+            $("p").eq(i).prepend("impair")
+        }else{
+            $("p").eq(i).append("pair")
+        }
+       } */
+
+       $("p").each(function(i , el){
+            if( i%2 == 0 ){
+                $(el).prepend("impair");
+            }else{
+                $(el).append("pair");
+            }
+       });
+       // $().each(function(){})
+
+    </script>
+</body>
+
+</html>
