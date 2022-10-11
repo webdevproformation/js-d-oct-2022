@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .vert {
+            background: green;
+        }
+        .orange{
+            background: orange;
+        }
+        .rouge{
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- table>tr*5>td*3>lorem2 -->
+    <table>
+        <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Asperiores, id?</td>
+            <td>Nemo, ipsa!</td>
+        </tr>
+        <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Dolorum, voluptatem.</td>
+            <td>Accusantium, eos.</td>
+        </tr>
+        <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Dolore, rem!</td>
+            <td>Adipisci, vero!</td>
+        </tr>
+        <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Mollitia, magnam.</td>
+            <td>Ut, unde.</td>
+        </tr>
+        <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Sapiente, animi.</td>
+            <td>Exercitationem, natus.</td>
+        </tr>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        // solution 1
+        // $("tr").eq(1).find("td").css("background" , "green")
+        // solution 2
+        $("tr").eq(1).find("td").addClass("vert") ;
+        $("tr").eq(1).addClass("vert") ;
+
+        // question 2
+        //$("tr").eq(2).find("td").eq(1).css("background" , "orange")
+        $("tr").eq(2).find("td").eq(1).addClass("orange") ;
+
+        // question 3
+        $("tr").last().find("td").css("background" , "red")
+        $("tr").last().find("td").addClass("rouge") ;
+        $("tr").last().find("td").attr("class","rouge") ;
+    </script>
+</body>
+
+</html>
