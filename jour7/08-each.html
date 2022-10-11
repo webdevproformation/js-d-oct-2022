@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p data-suffix="..." data-couleur="red">Lorem ipsum dolor sit amet.</p>
+    <p data-suffix="lire la suite" data-couleur="green">Neque libero nobis consequuntur similique.</p>
+    <p data-suffix="lire la suite" data-couleur="yellow">Neque libero nobis consequuntur similique.</p>
+    <p data-suffix="lire la suite" data-couleur="brown">Neque libero nobis consequuntur similique.</p>
+    <p data-suffix="lire la suite" data-couleur="pink">Neque libero nobis consequuntur similique.</p>
+    <p data-suffix="lire la suite" data-couleur="purple">Neque libero nobis consequuntur similique.</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        /* for(let i = 0 ; i <= 1 ; i++){
+            const el = $("p").eq(i)
+            el.css("color" , el.data("couleur"))
+        } */
+
+        $("p").each(function(i , el){ // boucle 
+            //if( i == 0 || i == 1 ){
+                $(el).css("color" , $(el).data("couleur"));
+                //$("p").eq(i).css("color" , $("p").eq(i).data("couleur"))
+            //}
+        });
+
+    </script>
+</body>
+</html>
+<!--
+    créer une nouvelle page html 09-exo.html  contenant 5 p de 5 mots
+
+    via jQuery :
+    - mettre tous les p en couleur rouge
+    - mettre le 1er p sur fond rose
+    - mettre le dernier p sur fond vert
+    - si le p est impair ajouter le texte "impair" en début de p
+    - si le p est pair ajouter le texte "pair" en fin de p
+
+    // solution vous pouvez le faire question par question
+    // solution => utiliser une boucle for
+    // solution => utiliser une boucle each de jquery
+
+    
+-->
