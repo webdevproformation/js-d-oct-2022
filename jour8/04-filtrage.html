@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button data-filtre="all">Voir tout</button>
+    <button data-filtre="animaux">Animaux</button>
+    <button data-filtre="fruits">Fruits</button>
+    <!-- emojipedia -->
+    <ul>
+        <li class="animaux">🦊</li>
+        <li class="fruits">🍒</li>
+        <li class="animaux">🦁</li>
+        <li class="fruits">🍌</li>
+        <li class="animaux">🐰</li>
+        <li class="animaux fruits">🍄</li>
+        <li class="legume">🥕</li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function action(event) {
+            const filtre = $(event.target).data("filtre")
+            $("li").each(function (i, el) {
+                if ($(el).hasClass(filtre) || filtre == "all") {
+                    $(el).show();
+                } else {
+                    $(el).hide();
+                }
+            })
+        }
+        $("button").on("click", action);
+    </script>
+
+</body>
+
+</html>
