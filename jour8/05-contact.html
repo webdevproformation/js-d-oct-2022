@@ -10,20 +10,26 @@
         h1 {
             text-align: center;
         }
+
         form {
             width: 700px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 70px 1fr;
-            gap:20px;
+            gap: 20px;
         }
-        input , textarea{
+
+        input,
+        textarea {
             padding: 5px;
         }
-        form div{
-            grid-column: 1 / 3; /* règle qui permet de forcer la largeur de l'élément sélectionné pour qu'il commence en colonne 1 et qu'il aille jusqu'à la colonne 3 qui est la dernière colonne  */
+
+        form div {
+            grid-column: 1 / 3;
+            /* règle qui permet de forcer la largeur de l'élément sélectionné pour qu'il commence en colonne 1 et qu'il aille jusqu'à la colonne 3 qui est la dernière colonne  */
         }
-        textarea{
+
+        textarea {
             width: 100%;
         }
     </style>
@@ -43,6 +49,55 @@
         </div>
         <input type="submit">
     </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        function action(event) {
+            // bloquer le rechargement automatique de la page 
+            event.preventDefault();
+
+            // récupérer les valeurs dans les champs 
+            const email = $("#email").val();
+            const sujet = $("#sujet").val();
+            const message = $("#message").val();
+            console.log(email, sujet, message);
+
+            const erreur = [];
+
+            if (sujet.length <= 3) {
+                erreur.push("le sujet doit contenir au minimum 3 lettres");
+            }
+
+            if (message.length <= 3) {
+                erreur.push("le message doit contenir au minimum 3 lettres");
+            }
+
+            // étudiant@a.fr
+            // expression régulière 
+            const patternEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{2,4}$/ ;
+            if (!patternEmail.test(email)) {
+                erreur.push("l'email n'est pas conforme");
+            }
+            $(".message").remove();
+            if (erreur.length == 0) {
+                $("form").after(`<p class="message success">merci pour votre message nous revenons vers vous au plus vite</p>`)
+                event.target.reset();
+            } else {
+                let texte = `<ul class="message erreur">`;
+                for(let i = 0 ; i < erreur.length ; i++){
+                    texte += `<li>${erreur[i]}</li>`
+                }
+                texte += "</ul>"
+                $("form").after(texte)
+            }
+
+        }
+
+
+        $("form").on("submit", action);
+
+
+    </script>
 </body>
 
 </html>
