@@ -5,51 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        h1 {
-            text-align: center;
-        }
-
-        form {
-            width: 700px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 70px 1fr;
-            gap: 20px;
-        }
-
-        input,
-        textarea {
-            padding: 5px;
-        }
-
-        form div {
-            grid-column: 1 / 3;
-            /* règle qui permet de forcer la largeur de l'élément sélectionné pour qu'il commence en colonne 1 et qu'il aille jusqu'à la colonne 3 qui est la dernière colonne  */
-        }
-
-        textarea {
-            width: 100%;
-        }
-    </style>
+    <title>Nous Contacter</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Nous contacter :</h1>
-    <form action="">
-        <label for="email">email</label>
-        <input type="email" id="email" placeholder="votre@email.fr">
-        <label for="sujet">sujet</label>
-        <input type="text" id="sujet" placeholder="votre sujet">
-        <div>
-            <label for="message">message</label>
-            <br>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="votre message"></textarea>
-        </div>
-        <input type="submit">
-    </form>
+    <div class="container">
+        <header></header>
+        <main>
+            <h1>Nous Contacter</h1>
+            <form action="">
+                <label for="email">email</label>
+                <input type="email" id="email" placeholder="votre@email.fr">
+                <label for="sujet">sujet</label>
+                <input type="text" id="sujet" placeholder="votre sujet">
+                <div>
+                    <label for="message">message</label>
+                    <br>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="votre message"></textarea>
+                </div>
+                <input type="submit">
+            </form>
+        </main>
+        <footer></footer>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $("header").load("tpl/header.html");
+        $("footer").load("tpl/footer.html");
+    </script>
     <script>
 
         function action(event) {
@@ -95,17 +79,3 @@
 </body>
 
 </html>
-<!--
-    créer le fichier 06-exo.html
-    h1 qui contient s'inscrire à la newsletter
-    formulaire 
-        email
-        bouton de soumission
-
-    en javascript / jquery => récupérer la valeur saisie dans le champ email
-    verifier qu'elle est conforme 
-    si erreur => afficher un message d'erreur
-    sinon dire merci ! et vider le champ email
-    github.com/webdevproformation
--->
-

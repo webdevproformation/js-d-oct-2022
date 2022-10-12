@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header></header>
+        <main>
+            <h1>Bienvenu dans le site !!</h1>
+            <div class="home"></div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $("header").load("tpl/header.html");
+        $("footer").load("tpl/footer.html");
+    </script>
+    <script>
+        const data = [
+            {
+                url : "https://source.unsplash.com/random/400x200",
+                titre : "premier article",
+                contenu : "un peu de texte"
+            },
+            {
+                url : "https://source.unsplash.com/random/400x201",
+                titre : "deuxième article",
+                contenu : "un peu de texte"
+            },
+            {
+                url : "https://source.unsplash.com/random/400x202",
+                titre : "troisième article",
+                contenu : "un peu de texte"
+            }
+        ];
+
+        let html = "";
+        for(let i = 0 ; i <= 2 ; i++ ){
+            html += `<section>
+                <img src="${data[i].url}" alt="">
+                <h2>${data[i].titre}</h2>
+                <p>${data[i].contenu}</p>
+            </section>` ;
+        }
+
+        $(".home").html(html) ;
+
+    </script>
+</body>
+</html>
