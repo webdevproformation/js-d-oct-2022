@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>S'inscrire à la newsletter</h1>
+    <form action="">
+        <input type="email" id="email" placeholder="votre@email.fr">
+        <input type="submit">
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        function action(event){
+            event.preventDefault();
+
+            const email = $("#email").val();
+            const patternEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{2,4}$/ ;
+            let erreur = "";
+            if(!patternEmail.test(email)){
+                erreur = "l'email n'est pas conforme" ;
+            }
+            $(".message").remove();
+            if(erreur == ""){
+                $("form").after(`<p class="message success">merci pour votre email !!</p>`)
+                event.target.reset();
+            }else {
+                $("form").after(`<p class="message erreur">${erreur}</p>`);
+            }
+        }
+
+        $("form").on("submit" , action);
+    </script>
+</body>
+</html>
