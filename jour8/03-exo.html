@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:1px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button data-index="0">CV</button>
+    <button data-index="1">Travaux</button>
+    <button data-index="2">Contact</button>
+    <button data-index="3">Référence</button>
+    <div>
+        <p>Voici mon CV</p>
+    </div>
+    <div>
+        <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Eos, enim a?</li>
+            <li>Illo, quo blanditiis.</li>
+        </ul>
+    </div>
+    <div>
+        <a href="mailto:toto@yahoo.fr">me contacter la email</a>
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4C4lwPM1ESk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $("div").hide().first().show();
+        function action(event){
+            const index = $(event.target).data("index");
+            $("div").hide().eq(index).show();
+        }
+
+        $("button").on("click" , action);
+    </script>
+</body>
+</html>
