@@ -71,7 +71,6 @@
             if (message.length <= 3) {
                 erreur.push("le message doit contenir au minimum 3 lettres");
             }
-
             // étudiant@a.fr
             // expression régulière 
             const patternEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{2,4}$/ ;
@@ -85,18 +84,13 @@
             } else {
                 let texte = `<ul class="message erreur">`;
                 for(let i = 0 ; i < erreur.length ; i++){
-                    texte += `<li>${erreur[i]}</li>`
+                    texte += `<li>${erreur[i]}</li>` ;
                 }
-                texte += "</ul>"
-                $("form").after(texte)
+                texte += "</ul>";
+                $("form").after(texte);
             }
-
         }
-
-
         $("form").on("submit", action);
-
-
     </script>
 </body>
 
