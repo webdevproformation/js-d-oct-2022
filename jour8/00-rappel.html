@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+    // $("p").html("toto")
+    // permet de modifier le contenu de la balise / remplir
+
+    // $("p").after("<h1>titi</h1>")
+    // ajouter une balise APRES la balise sélectionnée
+
+    // $("p").before("<h2>tutu</h2>")
+    // ajouter une balise AVANT la balise sélectionnée
+
+    // $("p").append("...")
+    // ajouter texte ou html AVANT </p> (balise fermante)
+
+    // $("p").prepend("")
+    // ajouter texte ou html APRES <p> (balise ouvrante)
+
+    //  <!-- before --><p><!-- prepend --> <!-- html -->  <!-- append --></p><!-- after-->
+
+    // ------------------
+
+    // $("p").attr("id" , "toto")
+    // <p>du texte</p>
+    // <p id="toto">du texte</p>
+
+    // $("img").attr("src" , "mon-image-200x400.jpg");
+    // <img src="mon-image.png" alt="">
+    // <img src="mon-image-200x400.jpg" alt="">
+
+    // $("ul").addClass("open")
+    //<ul></ul>
+    //<ul class="open"></ul>
+
+    //<ul class=""></ul>
+    // $("p").removeClass("open")
+
+    // ------------------
+
+    // js de base => créer des variables => utiliser dans notre code 
+    // html5 il est possible de stocker des valeurs directement dans les balises html
+
+    // <p data-text="lorem" data-bg="red" data-font-size="30px" data-open="false" ></p>
+    const p = {
+        text : "lorem",
+        bg : "red" ,
+        "font-size"  : "30px"
+    }
+    // $("p").data("text")
+    // p.text
+
+    const etudiants = [
+        {id : 1 , nom : "Alain"},
+        {id : 1 , nom : "Alain"},
+        {id : 1 , nom : "Alain"}
+    ]
+
+    etudiants[0].nom 
+
+    //<p data-id="1" data-nom="Alain"></p>
+    //<p data-id="2" data-nom="Céline"></p>
+    $("p").eq(0).data("nom")
+
+    // ------------------------
+
+    // for(let i = 0 ; i <= 4 ; i++){}
+    // while(){}
+
+    // $("h1").each(function(i , el){})
+    // el au 1er tour de boucle $("h1").eq(0);
+    // el au 2eme tour de boucle $("h1").eq(1);
+    // el au ieme tour de boucle $("h1").eq(i);
+
+    // ------------------------
+
+    // document.querySelector("p").addEventListener("click" , function(){})
+
+    // $("p").on("click" , function(){})
+
+    // ------------------------
+
+    // effets
+    // $("p").addClass()
+    // $("p").removeClass()
+    // $("p").hasClass()
+    // + css => effet => mettre dans la fonction déclenché par les évènements
+
+    // $("p").toggleClass() => alias des méthodes addClass() removeClass() hasClass()
+    // + css => effet
+
+    // $("p").fadeIn() => apparition opacité 0 => 1
+    // $("p").fadeOut() => disparition opacité 1 => 0
+    // $("p").fadeToggle() => alias fadeIn() fadeOut()
+
+    // $("p").slideDown() => apparition rideau qui descend
+    // $("p").slideUp() => disparition rideau qui monte
+    // $("p").slideToggle() => alias slideDown() slideUp()
+    </script>
+</body>
+
+</html>
