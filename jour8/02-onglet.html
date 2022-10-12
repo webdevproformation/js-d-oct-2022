@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button data-index="0">Accueil</button>
+    <button data-index="1">Blog</button>
+    <button data-index="2">Contact</button>
+    <div>
+        <h1>Bienvenu sur mon site </h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div>
+        <h1>Blog</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kLdQAsrcyvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div>
+        <h1>Nous contacter</h1>
+        <form action="">
+            <input type="text">
+            <input type="submit">
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        // uniquement la première div doit être affichée
+        // les deux autres sont masqués
+        $("div").hide().first().show();
+
+        function afficherOnglet(event){
+            // paramètre que l'on ajoute à la fonction qui est exécuté suite à évènement
+            // ce paramètre va permet de savoir sur quel bouton on est en train d'interagir
+            const index = $(event.target).data("index");
+            console.log(index);
+            $("div").hide().eq(index).show()
+        }
+
+        // sélectionner toutes les balises <button> affecter l'action afficherOnglet
+        $("button").on("click" , afficherOnglet)
+
+
+    </script>
+</body>
+</html>
