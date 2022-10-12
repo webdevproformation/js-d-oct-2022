@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        form {
+            width: 700px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap:20px;
+        }
+        input , textarea{
+            padding: 5px;
+        }
+        form div{
+            grid-column: 1 / 3; /* règle qui permet de forcer la largeur de l'élément sélectionné pour qu'il commence en colonne 1 et qu'il aille jusqu'à la colonne 3 qui est la dernière colonne  */
+        }
+        textarea{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Nous contacter :</h1>
+    <form action="">
+        <label for="email">email</label>
+        <input type="email" id="email" placeholder="votre@email.fr">
+        <label for="sujet">sujet</label>
+        <input type="text" id="sujet" placeholder="votre sujet">
+        <div>
+            <label for="message">message</label>
+            <br>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="votre message"></textarea>
+        </div>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
